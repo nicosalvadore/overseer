@@ -11,7 +11,7 @@ logging.basicConfig(
                         encoding='utf-8', 
                         level=logging.INFO, 
                         format='%(asctime)s %(levelname)s %(message)s', 
-                        handlers=[TimedRotatingFileHandler("app.log", when="M", interval=3, backupCount=3)]
+                        handlers=[TimedRotatingFileHandler("app.log", when="D", interval=30, backupCount=3)]
                     )
 
 def send_mail(old_ip, new_ip):

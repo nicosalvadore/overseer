@@ -24,8 +24,9 @@ Fill required fields in `.env`
 You could run this script every hour or night through a cronjob.
 
 On the first run, as the local `ip.log` file isn't available, the script will create it, add the current public IP address to it, and send an email.
+`ip.log` is created in the directoy from where you execute this script.
 
 On subsequent runs, the script will get the current IP address and compare it with the one stored in `ip.log`. If they are different, it will replace the one in the file with the new one and send an email. If they're identical, nothing happens.
 
 ## Logging
-`app.log` logs all steps of the script during execution, the log file is created in the same directory. A rotating schedule is set to keep 3 months of logs in `app.log.1-2-3`
+`app.log` logs all steps of the script during execution, the log file is created in the directoy from where you execute this script.

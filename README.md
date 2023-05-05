@@ -21,6 +21,8 @@ Fill required fields in `.env`
 ## Usage
 `python3 main.py`
 
+You could run this script every hour or night through a cronjob.
+
 On the first run, as the local `ip.log` file isn't available, the script will create it, add the current public IP address to it, and send an email.
 
 On subsequent runs, the script will get the current IP address and compare it with the one stored in `ip.log`. If they are different, it will replace the one in the file with the new one and send an email. If they're identical, nothing happens.

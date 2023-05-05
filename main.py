@@ -4,15 +4,14 @@ from sendgrid.helpers.mail import *
 import os
 from dotenv import load_dotenv
 import logging
-from logging.handlers import TimedRotatingFileHandler
 
 
 logging.basicConfig(    
-                        encoding='utf-8', 
-                        level=logging.INFO, 
-                        format='%(asctime)s %(levelname)s %(message)s', 
-                        handlers=[TimedRotatingFileHandler("app.log", when="D", interval=30, backupCount=3)]
-                    )
+    encoding='utf-8', 
+    level=logging.INFO, 
+    format='%(asctime)s %(levelname)s %(message)s', 
+    filename="app.log"
+)
 
 def send_mail(old_ip, new_ip):
     load_dotenv()
